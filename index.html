@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GARAGEM JIU-JITSU</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Academia Garagem Jiu-Jitsu em Guarulhos. Treinos de segunda, quarta e sexta. Entre em contato: (11) 94009-0413">
+    <meta name="keywords" content="Jiu-Jitsu Guarulhos, Garagem Jiu-Jitsu, academia de Jiu-Jitsu, treino Jiu-Jitsu, artes marciais Guarulhos">
+    <meta name="author" content="Garagem Jiu-Jitsu">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><span>GARAGEM</span>JIU-JITSU</a>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#features">Artes Marciais</a>
+            <a href="#pricing">Preços</a>
+            <a href="#trainers">Treinadores</a>
+            <a href="#Product">Produtos</a>
+        </nav>
+
+    </header>
+    <!--Fim cabeçalho-->
+
+<main>
+  <section id="home" class="home">
+    <div class="swiper home-slider">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="swiper-slide slide" style="position: relative; background: #000;">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Mais que uma equipe, uma família!</span>
+            <h3>Treine, evolua e faça parte da nossa família.</h3>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="logo-slide">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide slide" style="position: relative; background: #000;">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Disciplina e evolução constante</span>
+            <h3>Conquiste sua próxima graduação com dedicação!</h3>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="logo-slide">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide slide" style="position: relative; background: #000;">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Jiu-Jitsu para todas as idades</span>
+            <h3>Do infantil ao adulto, venha treinar com a gente!</h3>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="logo-slide">
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+/* Overlay para escurecer a imagem */
+.swiper-slide .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Texto do slide */
+.swiper-slide .content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+  bottom: 15%;
+  left: 40px;
+  max-width: 50%;
+}
+
+.swiper-slide .content span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.swiper-slide .content h3 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Logo posicionada mais ao meio da direita */
+.logo-slide {
+  position: absolute;
+  top: 50%;        
+  right: 120px;
+  transform: translateY(-50%);
+  max-width: 750px;
+  height: auto;
+  z-index: 2;
+  opacity: 0.5;        
+  filter: brightness(0.7);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) { /* Tablet */
+  .swiper-slide .content span {
+    font-size: 22px;
+  }
+  .swiper-slide .content h3 {
+    font-size: 28px;
+  }
+  .logo-slide {
+    max-width: 180px;
+    right: 80px;
+  }
+}
+
+@media (max-width: 768px) { /* Celular */
+  .swiper-slide .content {
+    bottom: 10%;
+    left: 20px;
+    max-width: 80%;
+    text-align: center;
+  }
+  .swiper-slide .content span {
+    font-size: 18px;
+  }
+  .swiper-slide .content h3 {
+    font-size: 22px;
+  }
+  .logo-slide {
+    max-width: 120px;
+    right: 20px;
+    top: auto;
+    bottom: 10%;
+    transform: none;
+  }
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.home-slider', {
+  loop: true,
+  autoplay: { delay: 7000, disableOnInteraction: false }, // mais demorado
+  allowTouchMove: true,
+  pagination: false,
+  effect: 'fade',
+  fadeEffect: { crossFade: true }
+});
+</script>
+
+    <!--Fim home-->
+
+<section id="about" class="about">
+    <div class="image">
+        <img src="img/davi-2.jpeg" alt="Garagem Jiu-Jitsu">
+    </div>
+    
+
+    <div class="content">
+        <span>Sobre Nós</span>
+        <h3 class="title">Supere seus limites a cada treino</h3>
+        <p>Jiu-Jitsu, Judô e Capoeira para corpo e mente fortes.</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h3><i class="fas fa-check"></i>Corpo e Mente</h3>
+                <p>Fortaleça corpo e mente.</p>
+            </div>
+
+            <div class="box">
+                <h3><i class="fas fa-check"></i>Vida Saudável</h3>
+                <p>Mais saúde e bem-estar.</p>
+            </div>
+
+            <div class="box">
+                <h3><i class="fas fa-check"></i>Estratégias</h3>
+                <p>Técnicas e movimentos eficientes.</p>
+            </div>
+
+            <div class="box">
+                <h3><i class="fas fa-check"></i>Treino</h3>
+                <p>Treinos fortes e desafiadores.</p>
+            </div>
+        </div>
+      
+        <a href="#" class="btn" data-modal="modal-historia">Nossa História</a>
+        <div id="modal-historia" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Nossa História</h2>
+    
+    <!-- Conteúdo em branco, você pode preencher depois -->
+    <p></p>
+ 
+  </div>
+</div>
+
+    </div>
+</section>
+
+<!--Fim sobre-->
+<section id="features" class="features">
+    <h1 class="heading"> <span>Artes Marciais</span> </h1>
+
+    <div class="box-container">
+        <!-- Judô -->
+        <div class="box">
+            <div class="image">
+                <img src="img/ricardo.jpeg" alt="">
+            </div>
+            <div class="content">
+                <img src="img/logo-3.png" alt="">
+                <h3>Judô</h3>
+                <p>Falar Mais sobre Judô</p>
+                <a href="#" class="btn" data-modal="modal-judo">Treinos</a>
+            </div>
+        </div>
+
+        <!-- Jiu Jitsu -->
+        <div class="box second">
+            <div class="image">
+                <img src="img/gradu.jpeg" alt="">
+            </div>
+            <div class="content">
+                <img src="img/logo.png" alt="">
+                <h3>Jiu Jitsu</h3>
+                <p>Falar Mais sobre Jiu Jitsu</p>
+                <a href="#" class="btn" data-modal="modal-jiu">Treinos</a>
+            </div>
+        </div>
+
+        <!-- Capoeira -->
+        <div class="box">
+            <div class="image">
+                <img src="img/capoeira.jpeg" alt="">
+            </div>
+            <div class="content">
+                <img src="img/logo-2 (1).png" alt="">
+                <h3>Capoeira</h3>
+                <p>Falar Mais sobre Capoeira</p>
+                <a href="#" class="btn" data-modal="modal-capoeira">Treinos</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modais -->
+<div id="modal-judo" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Grade Horária - Judô</h2>
+    <ul>
+      <li>
+        <span class="day">Terça - Quinta</span>
+        <div class="time">19h às 21h</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-jiu" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Grade Horária - Jiu Jitsu</h2>
+    <ul>
+      <li>
+        <span class="day">Segunda - Quarta - Sexta</span>
+        <div class="time">18h30 às 20h</div>
+        <div class="time">20h às 22h</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-capoeira" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Grade Horária - Capoeira</h2>
+    <ul>
+      <li>
+        <span class="day">Terça</span>
+        <div class="time">19h às 20h</div>
+      </li>
+      <li>
+        <span class="day">Sábado</span>
+        <div class="time">9h às 10h30</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Estilos -->
+<style>
+.features .box .content img {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #333;
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  color: #fff;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content .day {
+  color: #e63946; /* vermelho */
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-content .time {
+  font-size: 21px;
+  color: #fff; /* branco */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-content li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<!-- Script -->
+<script>
+  // Abrir modais
+  const modalBtns = document.querySelectorAll('.btn[data-modal]');
+  modalBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const modalId = btn.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if(modal) modal.style.display = 'flex';
+    });
+  });
+
+  // Fechar modais ao clicar no ×
+  const closeBtns = document.querySelectorAll('.modal .close');
+  closeBtns.forEach(span => {
+    span.addEventListener('click', () => {
+      span.closest('.modal').style.display = 'none';
+    });
+  });
+
+  // Fechar modais ao clicar fora do conteúdo
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    modal.addEventListener('click', e => {
+      if(e.target === modal){
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+<!-- Preços -->
+
+        <section id="princing" class="princing">
+            <h1 class="heading"> <span>Preços</span> </h1>
+            <div class="box-container">
+
+<section id="pricing" class="pricing">
+    <!-- Seção de Produtos -->
+    <div class="information">
+        <span>Produtos</span>
+        <h3>Produtos da melhor Qualidade com Preços acessíveis!</h3>
+        <p>Falar um pouco sobre isso</p>
+        <p><i class="fas fa-check"></i> Camisetas</p>
+        <p><i class="fas fa-check"></i> Rash Guard</p>
+        <p><i class="fas fa-check"></i> Dryfit</p>
+        <p><i class="fas fa-check"></i> Patch</p>
+        <a href="#Product" class="btn">Todos os Produtos</a>
+    </div>
+
+    <!-- Planos -->
+    <div class="plan basic">
+        <h3>Kids</h3>
+        <div class="price"><span>R$</span>60<span>/mês</span></div>
+        <div class="list">
+            <p><i class="fas fa-check"></i> Jiu-Jitsu, Judô e Capoeira</p>
+            <p><i class="fas fa-check"></i> Diversão e aprendizado com segurança</p>
+            <p><i class="fas fa-check"></i> Aprender brincando e crescer com respeito</p>
+            <p><i class="fas fa-check"></i> Preparação para campeonatos Kids</p>
+            <p><i class="fas fa-check"></i> Ambiente motivador e seguro</p>
+        </div>
+            <a href="https://forms.gle/fTL38W515CLejnNx9" class="btn">Quero</a>
+    </div>
+
+    <div class="plan">
+        <h3>Adulto</h3>
+        <div class="price"><span>R$</span>110<span>/mês</span></div>
+        <div class="list">
+            <p><i class="fas fa-check"></i> Jiu-Jitsu, Judô e Capoeira</p>
+            <p><i class="fas fa-check"></i> Treine, evolua e supere seus limites</p>
+            <p><i class="fas fa-check"></i> Força, disciplina e técnica</p>
+            <p><i class="fas fa-check"></i> Preparação para campeonatos</p>
+            <p><i class="fas fa-check"></i> Desenvolvimento físico e disciplina</p>
+        </div>
+            <a href="https://forms.gle/W5CT8uynmHcnC8bv9" class="btn">Quero</a>
+    </div>
+</section>
+
+</script>
+
+<!--Fim precos-->
+
+<section class="banner">
+    <span>Junte-se a Nós</span>
+    <h3>Entre em Contato</h3>
+      <p>Para mais dúvidas, entre em contato com a gente pelo WhatsApp!
+    </p>
+    <a href="https://wa.me/5511940090413?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20as%20aulas!" target="_blank" class="btn">Fale Conosco</a>
+
+</section>
+
+        <!--Fim banner-->
+
+<section id="trainers" class="trainers">
+    <h1 class="heading"><span>Treinadores</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="img/" alt="Leôncio Zozimo">
+            <div class="content">
+                <span>Jiu-Jitsu</span>
+                <h3>Leôncio Zozimo</h3>
+                <div class="share">
+                    <a href="https://www.instagram.com/leozozimo?igsh=azM0ZWRkZjNzNnB5" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img/" alt="Wilson Roberto">
+            <div class="content">
+                <span>Judô</span>
+                <h3>Wilson Roberto</h3>
+                <div class="share">
+                    <a href="https://www.instagram.com/wr_judo?igsh=MXFsNjFhNWI5MnhtMA==" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img/anderson.jpeg" alt="Anderson Rodrigues">
+            <div class="content">
+                <span>Capoeira</span>
+                <h3>Anderson Rodrigues</h3>
+                <div class="share">
+                    <a href="https://www.instagram.com/anderson_contramestre_cobra?igsh=MXAwbjFsbHI4d2s5Zw==" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img/professor.jpeg" alt="Luiz Henrique">
+            <div class="content">
+                <span>Capoeira</span>
+                <h3>Luiz Henrique</h3>
+                <div class="share">
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.trainers {
+    padding: 5rem 9%;
+    background: #000;
+    color: #fff;
+}
+
+.trainers .heading span {
+    color: rgb(255, 0, 0);
+    font-size: 3rem;
+    background: #000;
+    padding: .5rem 1.5rem;
+    border: 0.1rem solid #aaa;
+    border-radius: .5rem;
+}
+
+.trainers .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.trainers .box-container .box {
+    position: relative;
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.trainers .box-container .box:hover {
+    transform: translateY(-5px);
+}
+
+.trainers .box-container .box img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+.trainers .box-container .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 2rem;
+    transform: translateY(6.5rem);
+    transition: transform 0.3s;
+}
+
+.trainers .box-container .box:hover .content {
+    transform: translateY(0);
+}
+
+.trainers .box-container .box .content span {
+    font-size: 1.5rem;
+    color: rgb(255, 0, 0);
+}
+
+.trainers .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: .5rem;
+}
+
+.trainers .box-container .box .content .share {
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+    border-top: 0.1rem solid #aaa;
+}
+
+.trainers .box-container .box .content .share a {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.trainers .box-container .box .content .share a:hover {
+    color: rgb(255, 0, 0);
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .trainers .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .trainers .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+    }
+
+    .trainers .box-container .box .content {
+        transform: translateY(0);
+        position: relative;
+    }
+}
+</style>
+
+        <!--Fim treinadores-->
+
+        <section id="Product" class="Product">
+            <h1 class="heading"><span>Produtos</span></h1>
+
+        <style>
+             @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+    * {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    .produtos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .produto {
+      display: flex;
+      flex-direction: column; /* empilha card + nome */
+      align-items: center;
+    }
+
+    .card {
+      position: relative;
+      width: 250px;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background: #111;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(255,255,255,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: opacity 0.5s ease;
+    }
+
+    .card.rash img:nth-child(2) {
+      opacity: 0;
+    }
+    .card.rash:hover img:nth-child(1) {
+      opacity: 0;
+    }
+    .card.rash:hover img:nth-child(2) {
+      opacity: 1;
+    }
+
+    .nome-produto {
+      font-weight: 700;
+      font-size: 22px;
+      color: #fff;
+      text-align: center;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #111;
+      color: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .modal-content img.active {
+      display: block;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover {
+      color: #c00;
+    }
+
+    .cores {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .cor {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cor:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 5px #fff;
+    }
+
+    .cor.preta { background: #000; }
+    .cor.vermelha { background: #c00; }
+    .cor.cinza { background: #888; }
+    .cor.branca { background: #fff; }
+
+    .tamanhos {
+      margin: 15px 0;
+      font-size: 16px; /* tamanho menor */
+    }
+
+    .tamanhos span {
+      display: inline-block;
+      background: #222;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      margin: 3px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tamanhos span:hover {
+      background: #c00;
+      transform: scale(1.1);
+    }
+
+    .preco {
+      margin-top: 22px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+
+  <section class="produtos">
+    <!-- Rash Guard -->
+    <div class="produto">
+      <div class="card rash" onclick="abrirModal('rash')">
+        <img src="img/rash-black-2.jpeg" alt="Rash Guard Preta">
+        <img src="img/Rash-red-2.jpeg" alt="Rash Guard Vermelha">
+      </div>
+      <div class="nome-produto">Rash Guard</div>
+    </div>
+
+    <!-- Patch -->
+    <div class="produto">
+      <div class="card" onclick="abrirModal('patch')">
+        <img src="img/patch.jpeg" alt="Patch">
+      </div>
+      <div class="nome-produto">Patch</div>
+    </div>
+
+    <!-- Dryfit -->
+    <div class="produto">
+      <div class="card" onclick="abrirModal('dryfit')">
+        <img src="img/dryfit.jpeg" alt="Dryfit">
+      </div>
+      <div class="nome-produto">Dryfit</div>
+    </div>
+
+    <!-- Camisetas -->
+    <div class="produto">
+      <div class="card" onclick="abrirModal('camiseta')">
+        <img src="img/camiseta-2.jpeg" alt="Camisetas">
+      </div>
+      <div class="nome-produto">Camisetas</div>
+    </div>
+  </section>
+
+<!-- Modal Rash Guard -->
+<div id="rash" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('rash')">&times;</span>
+    <h2>Rash Guard</h2>
+    <img src="img/rash-black.jpeg" class="active" id="foto-preta">
+    <img src="img/rash-red.jpeg" id="foto-vermelha">
+    <img src="img/tabela.jpeg" id="foto-tabela">
+
+    <div class="cores">
+      <div class="cor preta" onclick="mostrarFoto('preta')"></div>
+      <div class="cor vermelha" onclick="mostrarFoto('vermelha')"></div>
+      <div class="cor tabela" style="background:#555" onclick="mostrarFoto('tabela')"></div>
+    </div>
+
+    <div class="tamanhos">
+      <span>PP</span><span>P</span><span>M</span><span>G</span>
+      <span>GG</span><span>GGG</span>
+    </div>
+
+    <div class="preco">R$ 100,00</div>
+  </div>
+</div>
+
+  <!-- Modal Patch -->
+  <div id="patch" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('patch')">&times;</span>
+      <h2>Patch</h2>
+      <img src="img/patch.jpeg" class="active">
+      <div class="preco">R$ 50,00</div>
+    </div>
+  </div>
+
+  <!-- Modal Dryfit -->
+  <div id="dryfit" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('dryfit')">&times;</span>
+      <h2>Dryfit</h2>
+      <img src="img/dryfit.jpeg" class="active" id="foto-dryfit">
+      <img src="img/tabela-2.jpeg" id="foto-tabela2">
+
+      <div class="cores">
+        <div class="cor branca" onclick="mostrarFoto('dryfit')"></div>
+        <div class="cor tabela" style="background:#555" onclick="mostrarFoto('tabela2')"></div>
+      </div>
+
+      <div class="tamanhos">
+        <span>PP</span><span>P</span><span>M</span><span>G</span>
+        <span>GG</span><span>GGG</span><span>4G</span>
+      </div>
+
+      <div class="preco">R$ 60,00</div>
+    </div>
+  </div>
+
+  <!-- Modal Camisetas -->
+  <div id="camiseta" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('camiseta')">&times;</span>
+      <h2>Camisetas</h2>
+      <img src="img/camiseta.jpeg" class="active" id="foto-preta-cam">
+      <img src="img/camiseta-cinza.jpeg" id="foto-cinza-cam">
+
+      <div class="cores">
+        <div class="cor preta" onclick="mostrarFoto('preta-cam')"></div>
+      </div>
+
+      <div class="tamanhos">
+        <span>PP</span><span>P</span><span>M</span><span>G</span><span>GG</span>
+      </div>
+
+      <div class="preco">R$ 70,00</div>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(id) {
+      document.getElementById(id).classList.add("show");
+    }
+
+    function fecharModal(id) {
+      document.getElementById(id).classList.remove("show");
+    }
+
+    function mostrarFoto(cor) {
+      const fotos = {
+        preta: document.getElementById('foto-preta'),
+        vermelha: document.getElementById('foto-vermelha'),
+        tabela: document.getElementById('foto-tabela'),
+        dryfit: document.getElementById('foto-dryfit'),
+        tabela2: document.getElementById('foto-tabela2'),
+        "preta-cam": document.getElementById('foto-preta-cam'),
+        "cinza-cam": document.getElementById('foto-cinza-cam')
+      };
+
+      for (let key in fotos) {
+        if(fotos[key]) fotos[key].classList.remove('active');
+      }
+
+      if(fotos[cor]) fotos[cor].classList.add('active');
+    }
+  </script>
+</section>
+
+    <!--Fim conteudo principal-->
+
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Links rápidos</h3>
+                <a class="links" href="#home">Início</a>
+                <a class="links" href="#about">Sobre</a>
+                <a class="links" href="#features">Artes Marciais</a>
+                <a class="links" href="#pricing">Preços</a>
+                <a class="links" href="#trainers">Treinadores</a>
+                <a class="links" href="#Product">Produtos</a>
+            </div>
+            <div class="box">
+                <h3>Horário de Funcionamento</h3>
+                <p> Segunda : <i> 18:30 - 22:00 </i> </p>
+                <p> Terça : <i> 18:30 - 20:00 </i> </p>
+                <p> Quarta : <i> 18:30 - 22:00 </i> </p>
+                <p> Quinta : <i> 19:00 - 21:00 </i> </p>
+                <p> Sexta : <i> 18:30 - 22:00 </i> </p>
+                <p> Sábado : <i> 8:30 - 10:00 </i> </p>
+                <p> Domingo : <i> Fechado </i> </p>
+            </div>
+            <div class="box">
+                <h3>Nossos Contatos</h3>
+                <p> <i class="fas fa-phone"></i> +11 94009-0413 </p>
+                <p class="email"><i class="fas fa-envelope"></i> garagemjiujitsu19@gmail.com</p>
+                <p> <i class="fas fa-map"></i> Guarulhos, SP</p>
+            <div class="share">
+                <a href="https://www.instagram.com/garagemjiujitsu_/" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://maps.app.goo.gl/xujg1xszyUx8MmW28" target="_blank" class="fas fa-map-marker-alt"></a>
+            </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src='main.js'></script>
+</body>
+
+</html>
