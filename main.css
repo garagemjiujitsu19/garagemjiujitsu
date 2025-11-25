@@ -598,8 +598,9 @@ section {
 }
 
 .footer .box-container .box .share a:hover {
-    background: red(5, 238, 21);
+    background: rgb(5, 238, 21);
 }
+
 
 .footer .box-container .box form {
     margin-left: 2rem;
@@ -711,39 +712,6 @@ section {
   filter: brightness(0.7);
 }
 
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  .swiper-slide .content {
-    bottom: 5%;              /* sobe um pouco o bloco de texto */
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 90%;
-    text-align: center;
-  }
-
-  .swiper-slide .content span {
-    font-size: 18px;
-  }
-
-  .swiper-slide .content h3 {
-    font-size: 22px;
-    margin-bottom: 1rem;     /* menos espaço antes da logo */
-  }
-
-  /* Agora a logo fica embaixo do texto */
-  .logo-slide {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 1rem;
-    max-width: 120px;
-    opacity: 0.9;
-    filter: none;           /* pode deixar normal no mobile */
-  }
-}
 /* =========================
    SLIDES / HOME
 ========================= */
@@ -778,81 +746,4 @@ section {
     font-size: 5rem;
     color: #fff;
     padding: 1rem 0;
-}
-
-/* Logo padrão (desktop) */
-.logo-slide {
-    position: absolute;
-    top: 50%;
-    right: 120px;
-    transform: translateY(-50%);
-    max-width: 350px;
-    height: auto;
-    z-index: 2;
-    opacity: 0.5;
-    filter: brightness(0.7);
-}
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-/* Tablets e celulares médios */
-@media (max-width: 991px) {
-    .home .slide .content {
-        width: 50rem;
-    }
-
-    .home .slide .content h3 {
-        font-size: 4rem;
-    }
-}
-
-/* Celular */
-@media (max-width: 768px) {
-    /* Conteúdo do slide */
-    .swiper-slide .content {
-        position: relative;       /* deixa dentro do fluxo */
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;               /* largura adaptativa */
-        text-align: center;
-        padding: 1rem 0;
-    }
-
-    .swiper-slide .content span {
-        font-size: 1.8rem;        /* 18px */
-    }
-
-    .swiper-slide .content h3 {
-        font-size: 2.2rem;        /* 22px */
-        margin-bottom: 1rem;
-    }
-
-    /* Logo abaixo do texto */
-    .logo-slide {
-        position: relative;
-        display: block;
-        margin: 1rem auto 0 auto;  /* centraliza horizontalmente */
-        max-width: 120px;
-        height: auto;
-        opacity: 0.9;
-        filter: none;
-    }
-}
-
-/* Celular pequeno */
-@media (max-width: 450px) {
-    .swiper-slide .content span {
-        font-size: 1.6rem;
-    }
-
-    .swiper-slide .content h3 {
-        font-size: 2rem;
-    }
-
-    .logo-slide {
-        max-width: 100px;
-    }
 }
