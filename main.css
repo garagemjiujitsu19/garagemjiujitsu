@@ -699,18 +699,18 @@ section {
     text-transform: none;
 }
 
-/* Logo padrão (desktop) */
 .logo-slide {
-  position: absolute;
-  top: 50%;
-  right: 120px;
-  transform: translateY(-50%);
-  max-width: 350px;
-  height: auto;
-  z-index: 2;
-  opacity: 0.5;
-  filter: brightness(0.7);
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 35%;
+    max-width: 250px;
+    height: auto;
+    z-index: 2;
+    opacity: 0.6;
+    filter: brightness(0.7);
 }
+
 
 /* =========================
    SLIDES / HOME
