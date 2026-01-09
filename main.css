@@ -71,12 +71,12 @@ section {
     display: inline-block;
     padding: 1rem 2.8rem;
     padding-right: 3rem;
-    background: linear-gradient(130deg, rgb(255, 0, 0) 0%, rgb(255, 0, 0) 93%, transparent 100%);
+    background: linear-gradient(130deg, rgb(255, 0, 0) 93%, 
+    transparent 90%);
     color: #fff;
     cursor: pointer;
     font-size: 1.7rem;
 }
-
 .btn:hover {
     transform: scale(1.1);
 }
@@ -99,7 +99,7 @@ section {
     font-size: 3rem;
 }
 .header .logo span {
-    color:rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
 }
 .header .navbar a {
     display: inline-block;
@@ -257,24 +257,10 @@ section {
 .features .box-container .box .image img {
     height: 100%;
     width: 100%;
-    /*a imagem é dimensionada para manter sua proporção e preencher 
+    /*a imagem é dimensionado para manter sua proporção e preencher 
     toda a caixa de conteúdo do elemento*/
     object-fit: cover;
-}  /* fecha aqui certinho */
-
-/* e agora vem a nova regra separada */
-.card.rash img {
-    position: absolute;   /* coloca as imagens uma sobre a outra */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: opacity 0.5s ease;
 }
-
-
 .features .box-container .box .content {
     padding: 2rem;
     text-align: center;
@@ -369,31 +355,61 @@ section {
 
 .trainers .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr)); /* aumenta largura mínima */
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
     gap: 1.5rem;
 }
 
 .trainers .box-container .box {
-    position: relative;
-    background: #111;
-    border-radius: 15px;
+    height: 40rem;
     overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s;
-    height: 42rem; /* um pouco menor que 45rem */
+    position: relative;
+}
+.trainers .box-container .box:hover .content {
+    transform: translateY(0);
 }
 
 .trainers .box-container .box img {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    display: block;
-    aspect-ratio: 4/3;
+}
+.trainers .box-container .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 2rem;
+    transform: translateY(6.5rem);
 }
 
+.trainers .box-container .box .content span {
+    font-size: 1.5rem;
+    color: rgb(255, 0, 0);
+}
+.trainers .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: .5rem;
+}
+.trainers .box-container .box .content .share {
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+    border-top: 0.1rem solid #aaa;
+}
+
+.trainers .box-container .box .content .share a {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.trainers .box-container .box .content .share a:hover {
+    color: rgb(255, 0, 0);
+}
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-    url(img/) no-repeat;
+    url(img/FITNESS\ CENTER\ _\ GYM.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -598,9 +614,8 @@ section {
 }
 
 .footer .box-container .box .share a:hover {
-    background: rgb(5, 238, 21);
+    background:  rgb(255, 0, 0);
 }
-
 
 .footer .box-container .box form {
     margin-left: 2rem;
@@ -695,102 +710,31 @@ section {
     }
 }
 
-.email {
-    text-transform: none;
+/* ============================
+   Produtos
+============================ */
+.produtos .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
-.logo-slide {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    width: 35%;
-    max-width: 250px;
-    height: auto;
-    z-index: 2;
-    opacity: 0.6;
-    filter: brightness(0.7);
+.produtos .cards .card {
+    background-color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-
-/* =========================
-   SLIDES / HOME
-========================= */
-
-.home {
-    padding: 0;
-    margin-top: 5rem;
+.produtos .cards .card:hover {
+    transform: scale(1.05);
 }
 
-.home .slide {
-    min-height: 90vh;
-    background-size: cover !important;
-    background-position: center !important;
-    padding: 2rem 9%;
-    display: flex;
-    align-items: center;
-    position: relative; /* importante para elementos absolutos internos */
-}
-
-.home .slide .content {
-    width: 60rem;
-    z-index: 2;
-}
-
-.home .slide .content span {
-    font-size: 2rem;
-    color: rgb(255, 0, 0);
-    display: block;
-}
-
-.home .slide .content h3 {
-    font-size: 5rem;
-    color: #fff;
-    padding: 1rem 0;
-}
-
-/* CORREÇÃO MOBILE DO SLIDE */
-@media (max-width: 768px) {
-
-    /* sobe o conteúdo do slide */
-    .home .slide {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start !important;
-        align-items: flex-start !important;
-        padding-top: 6rem;  /* sobe tudo */
-        padding-left: 2rem;
-        padding-right: 2rem;
-        min-height: 90vh;  /* evita esticar demais */
-    }
-
-    /* texto do letreiro */
-    .home .slide .content {
-        width: 100%;
-        margin: 0;
-        text-align: left;
-    }
-
-    .home .slide .content span {
-        font-size: 1.6rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .home .slide .content h3 {
-        font-size: 3rem;
-        line-height: 1.2;
-        margin-bottom: 1.5rem;
-    }
-
-    /* logo ajustada para ficar logo abaixo do texto */
-    .logo-slide {
-        position: relative;
-        width: 45%;
-        max-width: 160px;
-        margin-top: 1rem;
-        margin-left: 0;
-        transform: none;
-        right: 0;
-        bottom: 0;
-        opacity: 0.9;
-    }
+.produtos .cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
