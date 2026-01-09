@@ -978,3 +978,9 @@ section {
         font-size: 3.2rem;
     }
 }
+#menu-btn {
+    z-index: 11000;
+}
+.header .navbar {
+    z-index: 10000;
+}
