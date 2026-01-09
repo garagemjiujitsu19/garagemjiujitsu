@@ -364,6 +364,8 @@ section {
     overflow: hidden;
     position: relative;
 }
+
+/* efeito hover desktop */
 .trainers .box-container .box:hover .content {
     transform: translateY(0);
 }
@@ -373,6 +375,7 @@ section {
     width: 100%;
     object-fit: cover;
 }
+
 .trainers .box-container .box .content {
     position: absolute;
     bottom: 0;
@@ -381,17 +384,20 @@ section {
     background: #111;
     padding: 2rem;
     transform: translateY(6.5rem);
+    transition: transform 0.3s ease;
 }
 
 .trainers .box-container .box .content span {
     font-size: 1.5rem;
     color: rgb(255, 0, 0);
 }
+
 .trainers .box-container .box .content h3 {
     font-size: 2rem;
     color: #fff;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
 }
+
 .trainers .box-container .box .content .share {
     padding-top: 2rem;
     margin-top: 1.5rem;
@@ -407,9 +413,34 @@ section {
 .trainers .box-container .box .content .share a:hover {
     color: rgb(255, 0, 0);
 }
+
+/* Mobile: mostrar sempre */
+@media (max-width: 768px) {
+    .trainers .box-container .box .content {
+        transform: translateY(0);
+        position: relative;
+        background: transparent;
+        padding: 1rem 0 0 0;
+    }
+
+    .trainers .box-container .box .content span {
+        color: rgb(255, 0, 0);
+    }
+
+    .trainers .box-container .box .content h3 {
+        color: #111;
+    }
+
+    .trainers .box-container .box .content .share {
+        border-top: none;
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-    url(img/FITNESS\ CENTER\ _\ GYM.jpeg) no-repeat;
+    url() no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
