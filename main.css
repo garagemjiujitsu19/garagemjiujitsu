@@ -720,14 +720,22 @@ section {
         padding: 2rem;
     }
 
-    .header .navbar {
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        background: #000;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
+   .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #000;
+    display: none;
+}
+#menu-btn {
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.header .navbar.active {
+    display: block;
+}
 
     .header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -980,7 +988,4 @@ section {
 }
 #menu-btn {
     z-index: 11000;
-}
-.header .navbar {
-    z-index: 10000;
 }
