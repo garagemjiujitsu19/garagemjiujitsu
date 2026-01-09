@@ -2,22 +2,23 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .navbar');
 
-menu.onclick = () => {
+menu.addEventListener('click', () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
-};
+});
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
-};
+});
 
 const idadeInput = document.getElementById('idade');
 const responsavelContainer = document.getElementById('responsavel-container');
 const responsavelInput = document.getElementById('responsavel');
 
 idadeInput.addEventListener('input', () => {
-  if (idadeInput.value < 18) {
+  const idade = parseInt(idadeInput.value, 10);
+  if (!isNaN(idade) && idade < 18) {
     responsavelContainer.style.display = 'block';
     responsavelInput.required = true;
   } else {
@@ -25,6 +26,7 @@ idadeInput.addEventListener('input', () => {
     responsavelInput.required = false;
   }
 });
+
 
 // ---------------- SWIPERS ----------------
 var swiperHome = new Swiper(".home-slider", {
@@ -77,14 +79,9 @@ function mostrarFoto(cor) {
         "cinza-cam": document.getElementById('foto-cinza-cam')
     };
 
-    // Remove 'active' de todas
-    for (let key in fotos) {
-        if (fotos[key]) fotos[key].classList.remove('active');
-    }
+ Object.values(fotos).forEach(f => f?.classList.remove('active'));
+fotos[cor]?.classList.add('active');
 
-    // Ativa a selecionada
-    if (fotos[cor]) fotos[cor].classList.add('active');
-}
 
 // ---------------- FECHAR MODAL AO CLICAR FORA ----------------
 document.querySelectorAll('.modal').forEach(modal => {
@@ -94,3 +91,4 @@ document.querySelectorAll('.modal').forEach(modal => {
         }
     });
 });
+}
