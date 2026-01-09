@@ -554,19 +554,23 @@ document.querySelectorAll('.modal').forEach(modal => {
 </footer>
 
 <script>
-let menuBtn = document.getElementById('menu-btn');
-let navbar = document.querySelector('.header .navbar');
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const navbar = document.querySelector(".header .navbar");
 
-menuBtn.onclick = () => {
-    menuBtn.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-};
+    menuBtn.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+        menuBtn.classList.toggle("fa-times");
+    });
 
-// Fecha o menu ao rolar a página
-window.onscroll = () => {
-    menuBtn.classList.remove('fa-times');
-    navbar.classList.remove('active');
-};
+    // Fecha o menu ao clicar em um link
+    document.querySelectorAll(".header .navbar a").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuBtn.classList.remove("fa-times");
+        });
+    });
+});
 </script>
 
 </body>
