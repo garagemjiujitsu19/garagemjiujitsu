@@ -552,5 +552,22 @@ document.querySelectorAll('.modal').forEach(modal => {
 
     </div>
 </footer>
+
+<script>
+let menuBtn = document.getElementById('menu-btn');
+let navbar = document.querySelector('.header .navbar');
+
+menuBtn.onclick = () => {
+    menuBtn.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+};
+
+// Fecha o menu ao rolar a página
+window.onscroll = () => {
+    menuBtn.classList.remove('fa-times');
+    navbar.classList.remove('active');
+};
+</script>
+
 </body>
 </html>
