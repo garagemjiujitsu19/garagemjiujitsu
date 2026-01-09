@@ -769,3 +769,178 @@ section {
     object-fit: cover;
     margin-bottom: 1rem;
 }
+             @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+    * {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    .produtos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .produto {
+      display: flex;
+      flex-direction: column; /* empilha card + nome */
+      align-items: center;
+    }
+
+    .card {
+      position: relative;
+      width: 250px;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background: #111;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(255,255,255,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: opacity 0.5s ease;
+    }
+
+    .nome-produto {
+      font-weight: 700;
+      font-size: 22px;
+      color: #fff;
+      text-align: center;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #111;
+      color: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .modal-content img.active {
+      display: block;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover {
+      color: #c00;
+    }
+
+    .cores {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .cor {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cor:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 5px #fff;
+    }
+
+    .cor.preta { background: #000; }
+    .cor.vermelha { background: #c00; }
+    .cor.cinza { background: #888; }
+    .cor.branca { background: #fff; }
+
+    .tamanhos {
+      margin: 15px 0;
+      font-size: 16px; /* tamanho menor */
+    }
+
+    .tamanhos span {
+      display: inline-block;
+      background: #222;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      margin: 3px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tamanhos span:hover {
+      background: #c00;
+      transform: scale(1.1);
+    }
+
+    .preco {
+      margin-top: 22px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #fff;
+    }
