@@ -115,7 +115,10 @@ section {
     color: #fff;
     cursor: pointer;
     display: none;
+    /* aqui você adiciona: */
+    margin-left: auto;
 }
+
 
 /*class de swipwer para criar as bolinhas*/
 .swiper-pagination-bullet {
@@ -891,9 +894,7 @@ section {
         font-size: 3.2rem;
     }
 }
-#menu-btn {
-    z-index: 11000;
-}
+
 /*ESTILOS ESPECÍFICOS*/
 /* Mantém imagens na cor original */
 .features .box .content img {
