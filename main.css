@@ -876,37 +876,69 @@ section {
       font-weight: bold;
       color: #fff;
     }
-    @media (max-width: 768px) {
+/* =========================
+   HOME SLIDES
+========================= */
+.home .slide {
+    min-height: 100svh;
+    justify-content: center;
+    text-align: center;
+}
+
+.home .slide .content {
+    width: 100%;
+}
+
+.home .slide .content h3 {
+    font-size: 3.2rem;
+}
+
+@media (max-width: 768px) {
     .home .slide {
-        min-height: 100svh;
         justify-content: center;
         text-align: center;
+        padding: 2rem;
     }
 
     .home .slide .content {
-        width: 100%;
+        max-width: 100%;
     }
 
     .home .slide .content h3 {
         font-size: 3.2rem;
     }
 }
-#menu-btn {
-    z-index: 11000;
+
+/* =========================
+   BOTÃO FIXO VERMELHO
+========================= */
+.header .navbar a.btn-red {
+    background: rgb(255, 0, 0);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
 }
-/*ESTILOS ESPECÍFICOS*/
-/* Mantém imagens na cor original */
+
+.header .navbar a.btn-red:hover {
+    background: rgb(200, 0, 0);
+}
+
+/* =========================
+   IMAGENS SEM FILTRO
+========================= */
 .features .box .content img {
     filter: none !important;
     mix-blend-mode: normal !important;
 }
 
-/* Modal */
+/* =========================
+   MODAL
+========================= */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0, 0, 0, 0.85);
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -952,79 +984,55 @@ section {
     font-size: 28px;
     cursor: pointer;
 }
-@media (max-width: 768px) {
-    .home .slide {
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-    }
 
-    .home .content {
-        max-width: 100%;
-    }
-
-    .home .content h3 {
-        font-size: 3.2rem;
-    }
-}
+/* =========================
+   SOBRE
+========================= */
 .about {
     padding-top: 10rem;
 }
-/* BOTÃO FIXO VERMELHO NO MENU */
-.header .navbar a.btn-red {
-    background: rgb(255, 0, 0);
-    color: #fff;
-    font-weight: bold;
-}
 
-/* mantém vermelho no hover */
-.header .navbar a.btn-red:hover {
-    background: rgb(200, 0, 0);
-}
-.header .navbar a.btn-red {
-    background: rgb(255, 0, 0);
-    color: #fff;
-    font-weight: bold;
-    border-radius: 4px;
-}
 /* =========================
-   MOBILE MENU ADAPTADO
+   MENU DESKTOP GRANDE
 ========================= */
-@media (max-width: 768px) {
-
-    /* Esconde todos os links exceto btn-red */
-    .header .navbar a:not(.btn-red) {
-        display: none;
+@media (min-width: 769px) {
+    /* Navbar horizontal */
+    .header .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 1.2rem; /* espaço menor entre os links */
+        position: relative;
+        background: transparent;
+        padding: 1rem 2rem; /* altura do menu maior */
+        height: auto;
+        width: auto;
+        top: 0;
+        left: 0;
     }
 
-    /* Botão hamburguer já visível */
-    #menu-btn {
-        display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        font-size: 3rem;
-        z-index: 11000;
-        cursor: pointer;
-        color: #fff;
-    }
-
-    /* Navbar quando ativa */
-    .header .navbar.active a {
-        display: block;
-        background: #111;
-        padding: 1rem 2rem;
-        font-size: 1.7rem;
-        margin-top: 0.5rem;
-        border-bottom: 1px solid #333;
-    }
-
-    /* Mantém o botão vermelho sempre visível */
-    .header .navbar a.btn-red {
+    /* Links do menu desktop */
+    .header .navbar a {
         display: inline-block !important;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 12000;
+        padding: 1.2rem 2rem !important; /* mantém o tamanho do botão */
+        font-size: 1.8rem !important;      
+        font-weight: 600;
+        color: #fff !important;
+        border-radius: 6px;
+        transition: background 0.3s;
+    }
+
+    /* Botão vermelho */
+    .header .navbar a.btn-red {
+        background: rgb(255, 0, 0);
+        font-weight: bold;
+    }
+
+    .header .navbar a:hover {
+        background: rgb(255, 0, 0); /* mantém hover vermelho */
+    }
+
+    /* Esconde botão mobile */
+    #menu-btn {
+        display: none !important;
     }
 }
