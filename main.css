@@ -115,10 +115,7 @@ section {
     color: #fff;
     cursor: pointer;
     display: none;
-    margin-left: auto; /* empurra o botão para a direita */
 }
-
-
 
 /*class de swipwer para criar as bolinhas*/
 .swiper-pagination-bullet {
@@ -894,7 +891,9 @@ section {
         font-size: 3.2rem;
     }
 }
-
+#menu-btn {
+    z-index: 11000;
+}
 /*ESTILOS ESPECÍFICOS*/
 /* Mantém imagens na cor original */
 .features .box .content img {
@@ -987,4 +986,45 @@ section {
     color: #fff;
     font-weight: bold;
     border-radius: 4px;
+}
+/* =========================
+   MOBILE MENU ADAPTADO
+========================= */
+@media (max-width: 768px) {
+
+    /* Esconde todos os links exceto btn-red */
+    .header .navbar a:not(.btn-red) {
+        display: none;
+    }
+
+    /* Botão hamburguer já visível */
+    #menu-btn {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 3rem;
+        z-index: 11000;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    /* Navbar quando ativa */
+    .header .navbar.active a {
+        display: block;
+        background: #111;
+        padding: 1rem 2rem;
+        font-size: 1.7rem;
+        margin-top: 0.5rem;
+        border-bottom: 1px solid #333;
+    }
+
+    /* Mantém o botão vermelho sempre visível */
+    .header .navbar a.btn-red {
+        display: inline-block !important;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 12000;
+    }
 }
