@@ -970,3 +970,14 @@ section {
 .about {
     padding-top: 10rem;
 }
+/* BOTÃO FIXO VERMELHO NO MENU */
+.header .navbar a.btn-red {
+    background: rgb(255, 0, 0);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* mantém vermelho no hover */
+.header .navbar a.btn-red:hover {
+    background: rgb(200, 0, 0);
+}
