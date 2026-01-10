@@ -130,3 +130,4 @@ menuBtn.addEventListener("click", function () {
         icon.classList.add("fa-bars");
     });
 });
+});
