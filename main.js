@@ -1,6 +1,6 @@
 // ---------------- MENU ----------------
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .navbar');
+const menu = document.querySelector('#menu-btn');
+const navbar = document.querySelector('.header .navbar');
 
 menu.addEventListener('click', () => {
     menu.classList.toggle('fa-times');
@@ -12,24 +12,26 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('active');
 });
 
+// ---------------- RESPONSÁVEL MENOR DE 18 ----------------
 const idadeInput = document.getElementById('idade');
 const responsavelContainer = document.getElementById('responsavel-container');
 const responsavelInput = document.getElementById('responsavel');
 
-idadeInput.addEventListener('input', () => {
-  const idade = parseInt(idadeInput.value, 10);
-  if (!isNaN(idade) && idade < 18) {
-    responsavelContainer.style.display = 'block';
-    responsavelInput.required = true;
-  } else {
-    responsavelContainer.style.display = 'none';
-    responsavelInput.required = false;
-  }
-});
-
+if(idadeInput){
+    idadeInput.addEventListener('input', () => {
+        const idade = parseInt(idadeInput.value, 10);
+        if (!isNaN(idade) && idade < 18) {
+            responsavelContainer.style.display = 'block';
+            responsavelInput.required = true;
+        } else {
+            responsavelContainer.style.display = 'none';
+            responsavelInput.required = false;
+        }
+    });
+}
 
 // ---------------- SWIPERS ----------------
-var swiperHome = new Swiper(".home-slider", {
+const swiperHome = new Swiper(".home-slider", {
     spaceBetween: 20,
     effect: "fade",
     grabCursor: true,
@@ -39,7 +41,7 @@ var swiperHome = new Swiper(".home-slider", {
     pagination: { el: ".swiper-pagination", clickable: true },
 });
 
-var swiperReview = new Swiper(".review-slider", {
+const swiperReview = new Swiper(".review-slider", {
     spaceBetween: 20,
     grabCursor: true,
     loop: true,
@@ -47,7 +49,7 @@ var swiperReview = new Swiper(".review-slider", {
     breakpoints: { 0: { slidesPerView: 1 }, 600: { slidesPerView: 2 } },
 });
 
-var swiperBlogs = new Swiper(".blogs-slider", {
+const swiperBlogs = new Swiper(".blogs-slider", {
     spaceBetween: 20,
     grabCursor: true,
     loop: true,
@@ -56,16 +58,19 @@ var swiperBlogs = new Swiper(".blogs-slider", {
     breakpoints: { 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 991: { slidesPerView: 3 } },
 });
 
-// ---------------- MODAIS E TROCA DE IMAGENS ----------------
-function abrirModal(id) {
-    document.getElementById(id).classList.add("show");
+// ---------------- MODAIS ----------------
+function abrirModal(id){
+    const modal = document.getElementById(id);
+    if(modal) modal.classList.add('show');
 }
 
-function fecharModal(id) {
-    document.getElementById(id).classList.remove("show");
+function fecharModal(id){
+    const modal = document.getElementById(id);
+    if(modal) modal.classList.remove('show');
 }
 
-function mostrarFoto(cor) {
+// ---------------- TROCA DE FOTOS ----------------
+function mostrarFoto(cor){
     const fotos = {
         // Rash Guard
         preta: document.getElementById('foto-preta'),
@@ -78,17 +83,45 @@ function mostrarFoto(cor) {
         "preta-cam": document.getElementById('foto-preta-cam'),
         "cinza-cam": document.getElementById('foto-cinza-cam')
     };
+    Object.values(fotos).forEach(f => f?.classList.remove('active'));
+    if(fotos[cor]) fotos[cor].classList.add('active');
+}
 
- Object.values(fotos).forEach(f => f?.classList.remove('active'));
-fotos[cor]?.classList.add('active');
-
-
-// ---------------- FECHAR MODAL AO CLICAR FORA ----------------
-document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) { // só fecha se clicar no fundo
-            modal.classList.remove('show');
-        }
+// ---------------- MODAIS DOS TREINOS ----------------
+document.querySelectorAll('.btn[data-modal]').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        const modal = document.getElementById(btn.dataset.modal);
+        if(modal) modal.classList.add('show');
     });
 });
-}
+
+document.querySelectorAll('.modal .close').forEach(close => {
+    close.addEventListener('click', () => {
+        close.closest('.modal').classList.remove('show');
+    });
+});
+
+// FECHAR MODAL AO CLICAR FORA
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', e => {
+        if(e.target === modal) modal.classList.remove('show');
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const navbar = document.querySelector(".header .navbar");
+
+    menuBtn.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+        menuBtn.classList.toggle("fa-times");
+    });
+
+    // Fecha o menu ao clicar em um link (exceto btn-red)
+    document.querySelectorAll(".header .navbar a:not(.btn-red)").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuBtn.classList.remove("fa-times");
+        });
+    });
+});
