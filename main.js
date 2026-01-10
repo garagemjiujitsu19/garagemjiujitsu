@@ -112,16 +112,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
     const navbar = document.querySelector(".header .navbar");
 
-    menuBtn.addEventListener("click", function () {
-        navbar.classList.toggle("active");
-        menuBtn.classList.toggle("fa-times");
-    });
+menuBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+
+    const icon = menuBtn.querySelector('i'); // seleciona o <i> dentro do botão
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-times");
+});
 
     // Fecha o menu ao clicar em um link (exceto btn-red)
     document.querySelectorAll(".header .navbar a:not(.btn-red)").forEach(link => {
-        link.addEventListener("click", () => {
-            navbar.classList.remove("active");
-            menuBtn.classList.remove("fa-times");
-        });
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+
+        const icon = menuBtn.querySelector('i');
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
     });
 });
