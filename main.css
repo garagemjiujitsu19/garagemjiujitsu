@@ -999,7 +999,7 @@ section {
     .header .navbar {
         display: flex !important;
         flex-direction: row !important;
-        gap: 1.2rem; /* espaço entre links */
+        gap: 2rem; /* espaço entre links */
         position: relative;
         background: transparent;
         padding: 1rem 2rem;
@@ -1008,7 +1008,7 @@ section {
 
     .header .navbar a {
         display: inline-block !important;
-        padding: 1.2rem 2rem !important; /* tamanho grande */
+        padding: 1.5rem 2.5rem !important;
         font-size: 1.8rem !important;
         font-weight: 600;
         color: #fff !important;
@@ -1055,10 +1055,10 @@ section {
         background: #111;
         display: flex;
         flex-direction: column;
-        padding-top: 5rem;
+        padding-top: 6rem;
         transition: left 0.3s ease;
         z-index: 10900;
-        gap: 0; /* sem espaçamento extra */
+        gap: 1rem; /* espaço entre os links */
     }
 
     .header .navbar.active {
@@ -1067,11 +1067,13 @@ section {
 
     .header .navbar a {
         display: block;
-        padding: 1.5rem 2rem; /* links grandes */
-        font-size: 1.8rem;    /* tamanho do texto maior */
-        border-bottom: 1px solid #333;
+        padding: 2rem 2rem; /* links grandes */
+        font-size: 2rem;    /* texto grande */
         color: #fff;
-        margin: 0; /* remove espaçamento extra */
+        border-bottom: 1px solid #333;
+        margin: 0;
+        border-radius: 4px;
+        text-align: center;
     }
 
     .header .navbar a.btn-red {
@@ -1083,18 +1085,36 @@ section {
         background: rgb(255, 0, 0);
     }
 }
+
 /* =========================
-   MODAL - DESKTOP
+   MODAL - DESKTOP E MOBILE
 ========================= */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
 .modal-content {
     background: #333;
     padding: 40px;
     border-radius: 15px;
     width: 90%;
-    max-width: 600px; /* tamanho fixo desktop */
+    max-width: 600px;
     text-align: center;
     color: #fff;
     position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    transition: transform 0.3s ease;
 }
 
 .modal-content h2 {
@@ -1127,12 +1147,9 @@ section {
     cursor: pointer;
 }
 
-/* =========================
-   MODAL - MOBILE
-========================= */
 @media (max-width: 768px) {
     .modal-content {
-        width: 95%; /* ocupa quase toda a tela */
+        width: 95%;
         padding: 30px;
         border-radius: 12px;
     }
