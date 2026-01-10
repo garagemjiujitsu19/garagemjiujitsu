@@ -115,9 +115,9 @@ section {
     color: #fff;
     cursor: pointer;
     display: none;
-    /* aqui você adiciona: */
-    margin-left: auto;
+    margin-left: auto; /* empurra o botão para a direita */
 }
+
 
 
 /*class de swipwer para criar as bolinhas*/
