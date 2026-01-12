@@ -61,13 +61,20 @@ const swiperBlogs = new Swiper(".blogs-slider", {
 // ---------------- MODAIS ----------------
 function abrirModal(id){
     const modal = document.getElementById(id);
-    if(modal) modal.classList.add('show');
+    if(modal){
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // trava fundo
+    }
 }
 
 function fecharModal(id){
     const modal = document.getElementById(id);
-    if(modal) modal.classList.remove('show');
+    if(modal){
+        modal.classList.remove('show');
+        document.body.style.overflow = ''; // libera scroll
+    }
 }
+
 
 // ---------------- TROCA DE FOTOS ----------------
 function mostrarFoto(cor){
@@ -96,18 +103,23 @@ document.querySelectorAll('.btn[data-modal]').forEach(btn => {
     });
 });
 
-document.querySelectorAll('.modal .close').forEach(close => {
-    close.addEventListener('click', () => {
-        close.closest('.modal').classList.remove('show');
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', e => {
+        if(e.target === modal){
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
     });
 });
 
+
 // FECHAR MODAL AO CLICAR FORA
-document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', e => {
-        if(e.target === modal) modal.classList.remove('show');
+document.querySelectorAll('.modal-content').forEach(content => {
+    content.addEventListener('click', e => {
+        e.stopPropagation();
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
     const navbar = document.querySelector(".header .navbar");
