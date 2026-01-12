@@ -63,7 +63,7 @@ function abrirModal(id){
     const modal = document.getElementById(id);
     if(modal){
         modal.classList.add('show');
-        document.body.style.overflow = 'hidden'; // trava fundo
+        document.body.classList.add('modal-open');
     }
 }
 
@@ -71,11 +71,9 @@ function fecharModal(id){
     const modal = document.getElementById(id);
     if(modal){
         modal.classList.remove('show');
-        document.body.style.overflow = ''; // libera scroll
+        document.body.classList.remove('modal-open');
     }
 }
-
-
 // ---------------- TROCA DE FOTOS ----------------
 function mostrarFoto(cor){
     const fotos = {
