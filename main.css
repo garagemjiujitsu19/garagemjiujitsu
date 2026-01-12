@@ -1032,3 +1032,10 @@ section {
         font-size: 1.6rem;
     }
 }
+body.modal-open {
+    overflow: hidden;
+    touch-action: none;
+}
+body.modal-open header {
+    display: none;
+}
