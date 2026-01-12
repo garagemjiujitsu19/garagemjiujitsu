@@ -980,12 +980,7 @@ section {
     background: #111;
     max-width: 720px;
     padding: 45px;
-    text-align: left;
-}
-
-.modal-historia .modal-content {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
+    text-align: left; /* leitura muito melhor */
 }
 
 /* Título */
@@ -1000,12 +995,11 @@ section {
 /* Parágrafos */
 .modal-historia p {
     font-size: 1.85rem;   /* ↑ AUMENTA BEM */
-    line-height: 1.85;    /* respiração */
-    color: #ffffff;
+    line-height: 1;    /* respiração */
+    color: #e0e0e0;
     margin-bottom: 2rem;
     text-transform: none;
 }
-
 
 /* Itálico mais legível */
 .modal-historia p em {
@@ -1037,14 +1031,4 @@ section {
     .modal-historia .lema {
         font-size: 1.6rem;
     }
-}
-/* =========================
-   CORREÇÃO SCROLL – NOSSA HISTÓRIA
-========================= */
-
-.modal-historia {
-    position: fixed;
-    inset: 0;
-    overflow-y: auto; /*ISSO RESOLVE O TRAVAMENTO */
-    -webkit-overflow-scrolling: touch;
 }
