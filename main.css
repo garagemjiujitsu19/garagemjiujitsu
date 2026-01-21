@@ -202,9 +202,6 @@ section {
 }
 .features .box-container {
     display: grid;
-    /*Vai cria o auto-fit também tenta 
-    colocar quantas colunas der, expandindo os itens para caber no espaço disponível.
-    E com controle do tamanho mínimo e máximo dos itens.*/
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     gap: 1.5rem;
 }
@@ -221,18 +218,21 @@ section {
     transform: scale(1.1);
 }
 .features .box-container .box .image {
-    height: 30rem;
     width: 100%;
+    aspect-ratio: 5 / 3;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .features .box-container .box .image img {
-    height: 100%;
     width: 100%;
-    /*a imagem é dimensionado para manter sua proporção e preencher 
-    toda a caixa de conteúdo do elemento*/
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover;    /* mantém proporção sem distorcer */
+    display: block;
 }
+
 .features .box-container .box .content {
     padding: 2rem;
     text-align: center;
